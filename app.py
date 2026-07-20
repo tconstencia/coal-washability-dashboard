@@ -71,24 +71,8 @@ fig.add_trace(go.Scatter(
 fig.update_layout(
     title=f"Washability Curves: {selected_seam} ({selected_size.capitalize()})",
     xaxis=dict(title='Relative Density (RD)'),
-    
-    # Define Y1
-    yaxis=dict(
-        title='Calorific Value (MJ/kg)', 
-        titlefont=dict(color='blue'), 
-        tickfont=dict(color='blue')
-    ),
-    
-    # Define Y2 explicitly and link it to the plot
-    yaxis2=dict(
-        title='Ash (%)', 
-        titlefont=dict(color='red'), 
-        tickfont=dict(color='red'), 
-        overlaying='y', 
-        side='right'
-    ),
-    
-    # Ensure the chart knows to use both y-axes
+    yaxis=dict(title='Calorific Value (MJ/kg)', titlefont=dict(color='blue'), tickfont=dict(color='blue')),
+    yaxis2=dict(title='Ash (%)', titlefont=dict(color='red'), tickfont=dict(color='red'), overlaying='y', side='right'),
     hovermode="x unified"
 )
 
